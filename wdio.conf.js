@@ -1,7 +1,7 @@
 export const config = {
     runner: 'local',
     specs: [
-        './test/specs/*.e2e.js'
+        './test/specs/*.e2e_L2.js'
     ],
     exclude: [
         // './test/specs/examples/**/*.js'
@@ -28,7 +28,7 @@ export const config = {
         'goog:chromeOptions': {
             args: [
                 // '--window-size=1920,1080',
-                // '--headless',
+                //'--headless',
                 '--no-sandbox',
                 '--disable-gpu',
                 '--disable-setuid-sandbox',
@@ -37,13 +37,14 @@ export const config = {
             ]
         },
         "moz:firefoxOptions": {
-            // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
+            //flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
             args: [
                 // '-headless'
+                
             ]
         }
     }],
-    logLevel: 'silent',
+    logLevel: 'info',
     bail: 0,
     baseUrl: 'https://team8-2022brno.herokuapp.com',
     waitforTimeout: 10000,

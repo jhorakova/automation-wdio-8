@@ -1,6 +1,16 @@
-import { username, password } from './fixtures.js'
-// import LoginPage from '../pageobjects/login.page'
-// import ApplicationsPage from '../pageobjects/applications.page'
+
+
+
+
+describe('czechitas kontakty', async () => {
+
+    it ('kontakty', async () => {
+        await browser.reloadSession();
+        await browser.url('/kontakt');
+        await browser.pause(3000);
+    })
+})
+
 
 describe('Czechitas Login Page', async () => {
 
@@ -19,4 +29,4 @@ describe('Czechitas Login Page', async () => {
 
     });
 
-});
+})
