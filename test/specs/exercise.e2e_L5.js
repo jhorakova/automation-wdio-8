@@ -1,6 +1,3 @@
-/**
- * Lesson 4: Test structure
- */
 import {username, password} from '../../fixtures.js'
 
 describe('Login Page', async () => {
@@ -10,7 +7,7 @@ describe('Login Page', async () => {
         await browser.url('/prihlaseni');
     });
 
-    it('should show login form', async () => {
+    it.only('should show login form', async () => {
         const emailField = $('#email');
         await expect(emailField).toBeDisplayed();
         await expect(emailField).toBeEnabled();
@@ -26,13 +23,11 @@ describe('Login Page', async () => {
         //console.log('Password field is dislayed: ' + await passwordField.isEnabled());
 
         const loginButton = $('.btn-primary');
-        await expect(loginButton).toBeDisplayed();
-        await expect(await loginButton.getText()).toEqual('Přihlásit');
-        //console.log('Login button is dislayed:' + await loginButton.isDisplayed());
-        //console.log('Login button text is: ' + await loginButton.getText());
+        console.log('Login button is dislayed: ' + await loginButton.isDisplayed());
+        console.log('Login button text is: ' + await loginButton.getText());
     });
 
-    it.only('should login with valid credentials', async () => {
+    it('should login with valid credentials', async () => {
         const emailField = $('#email');
         const passwordField = $('#password');
         const loginButton = $('.btn-primary');
